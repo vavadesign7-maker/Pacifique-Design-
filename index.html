@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FF6B00">
+<meta name="description" content="Pacifique Design – logo design, branding, posters and social media design in Bujumbura, Burundi.">
+<title>Pacifique Design</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+/* Safety: splash can never get stuck, and errors are shown on screen */
+(function(){
+  function hide(){var s=document.getElementById('splash');if(s){s.classList.add('hide');}}
+  setTimeout(hide,1100);
+  document.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('#splash'))hide();});
+  window.onerror=function(msg,src,line){
+    hide();
+    var d=document.createElement('div');
+    d.style.cssText='position:fixed;left:8px;right:8px;top:8px;z-index:999;background:#fff;color:#B84700;border:2px solid #FF6B00;border-radius:12px;padding:10px;font:13px sans-serif';
+    d.textContent='Error: '+msg+' (line '+line+')';
+    document.body.appendChild(d);
+  };
+})();
+</script>
+<!-- ICONS -->
+<div id="icons"></div>
+
+<!-- SPLASH -->
+<div id="splash" aria-hidden="true">
+  <div class="splash-in">
+    <div class="mark js-logo" style="width:88px;height:88px;margin:0 auto 18px;font-size:34px"><span>PD</span></div>
+    <h1>Pacifique Design</h1>
+    <p>Design that people remember</p>
+    <div class="bar"><i></i></div>
+  </div>
+</div>
+
+<div class="shell">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <a href="#/home" class="brand" aria-label="Pacifique Design home">
+      <div class="mark js-logo"><span>PD</span></div>
+      <span>Pacifique Design</span>
+    </a>
+    <button class="icon-btn" id="openMenu" aria-label="Open menu"><svg class="ic"><use href="#i-menu"/></svg></button>
+  </header>
+
+  <main id="app">
+
+    <!-- ============ HOME ============ -->
+    <section class="page active" data-page="home">
+      <div class="hero">
+        <span class="hi"><svg class="ic" style="width:16px;height:16px"><use href="#i-pin"/></svg> Bujumbura, Burundi</span>
+        <h1>Welcome to Pacifique Design</h1>
+        <p>We turn your ideas into logos, brands and designs your customers will love. Tell us about your project and let's create something great together.</p>
+        <div class="cta">
+          <a class="btn btn-light" href="#/order">Start your project</a>
+          <a class="btn btn-line" style="background:transparent;border-color:#fff;color:#fff" href="#/work">See our work</a>
+        </div>
+        <div class="hero-img frame" id="heroImg" style="--pb:115%"></div>
+      </div>
+
+      <div class="quick">
+        <a href="#" class="js-wa"><svg class="ic"><use href="#i-chat"/></svg>WhatsApp</a>
+        <a href="#" class="js-tel"><svg class="ic"><use href="#i-phone"/></svg>Call us</a>
+        <a href="#" class="js-mail"><svg class="ic"><use href="#i-mail"/></svg>Email</a>
+      </div>
+
+      <div class="pad">
+        <div class="row">
+          <div>
+            <h2 class="title">Latest work</h2>
+            <p class="lead">A few projects we are proud of.</p>
+          </div>
+          <a class="link" href="#/work">View all <svg class="ic"><use href="#i-arrow"/></svg></a>
+        </div>
+        <div class="grid" id="homeWork"></div>
+      </div>
+
+      <div class="pad" style="padding-top:8px">
+        <div class="row">
+          <div>
+            <h2 class="title">What we do</h2>
+            <p class="lead">Everything your brand needs to look professional.</p>
+          </div>
+        </div>
+        <div class="list" id="homeServices"></div>
+        <a class="btn btn-line btn-block" style="margin-top:14px" href="#/services">See all services</a>
+      </div>
+
+      <div class="pad" style="padding-top:8px">
+        <h2 class="title">How we work</h2>
+        <p class="lead">Simple, clear and friendly from start to finish.</p>
+        <div class="steps" style="margin-top:20px">
+          <div class="step"><div><h4>Tell us your idea</h4><p>Share your name, your needs and your style. A quick WhatsApp message is enough.</p></div></div>
+          <div class="step"><div><h4>We create concepts</h4><p>You get fresh design options made just for your business.</p></div></div>
+          <div class="step"><div><h4>We refine together</h4><p>Your feedback shapes every detail until you love it.</p></div></div>
+          <div class="step"><div><h4>You receive your files</h4><p>Print-ready and web-ready files, delivered on time.</p></div></div>
+        </div>
+      </div>
+
+      <div class="band">
+        <h3>Ready to make your brand stand out?</h3>
+        <p>We would love to hear from you. Send us a message and we will reply as soon as we can.</p>
+        <a class="btn btn-light btn-block js-wa" href="#"><svg class="ic"><use href="#i-chat"/></svg>Chat on WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="page" data-page="work">
+      <div class="pad">
+        <h2 class="title">Our work</h2>
+        <p class="lead">Browse our designs. Tap any project to view it larger.</p>
+        <div class="chips" id="chips" style="margin-top:18px"></div>
+        <div class="grid" id="workGrid"></div>
+        <div class="band" style="margin:30px 0 0">
+          <h3>Like what you see?</h3>
+          <p>Let's create something just as good for you.</p>
+          <a class="btn btn-light btn-block" href="#/order">Start your project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="page" data-page="services">
+      <div class="pad">
+        <h2 class="title">Our services</h2>
+        <p class="lead">Professional design for businesses, events and creators. Choose a service and send us your request.</p>
+        <div class="list" id="serviceList" style="margin-top:22px"></div>
+      </div>
+    </section>
+
+    <!-- ============ ORDER / SIGN UP ============ -->
+    <section class="page" data-page="order">
+      <div class="pad">
+        <h2 class="title">Start your project</h2>
+        <p class="lead">Fill in the form and we will contact you on WhatsApp to talk about your design.</p>
+
+        <form id="orderForm" novalidate>
+          <div class="field" data-f="name">
+            <label for="fName">Your name</label>
+            <input id="fName" name="name" type="text" placeholder="e.g. Jean Claude" autocomplete="name">
+            <div class="err">Please enter your name.</div>
+          </div>
+          <div class="field" data-f="country">
+            <label for="fCountry">Country</label>
+            <input id="fCountry" name="country" type="text" placeholder="e.g. Burundi" autocomplete="country-name">
+            <div class="err">Please enter your country.</div>
+          </div>
+          <div class="field" data-f="contact">
+            <label for="fContact">Phone / WhatsApp number</label>
+            <input id="fContact" name="contact" type="tel" placeholder="e.g. +257 69 000 000" autocomplete="tel">
+            <div class="err">Please enter a valid phone number.</div>
+          </div>
+          <div class="field" data-f="design">
+            <label for="fDesign">Which design do you need?</label>
+            <select id="fDesign" name="design"></select>
+            <div class="err">Please choose a design.</div>
+          </div>
+          <div class="field">
+            <label for="fDetails">Tell us more (optional)</label>
+            <textarea id="fDetails" name="details" placeholder="Describe your idea, your business, colors you like, deadline..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit"><svg class="ic"><use href="#i-send"/></svg>Send on WhatsApp</button>
+          <button class="btn btn-line btn-block" type="button" id="sendMail"><svg class="ic"><use href="#i-mail"/></svg>Send by email instead</button>
+          <p class="note">Your request opens in WhatsApp so you can review it before sending.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="page" data-page="contact">
+      <div class="pad">
+        <h2 class="title">Let's talk</h2>
+        <p class="lead">We are always happy to hear from you. Reach us in the way that suits you best.</p>
+        <div class="cards">
+          <a class="card js-wa" href="#"><div class="ico"><svg class="ic"><use href="#i-chat"/></svg></div><div><small>WhatsApp</small><b class="js-phone"></b></div></a>
+          <a class="card js-tel" href="#"><div class="ico"><svg class="ic"><use href="#i-phone"/></svg></div><div><small>Call us</small><b class="js-phone"></b></div></a>
+          <a class="card js-mail" href="#"><div class="ico"><svg class="ic"><use href="#i-mail"/></svg></div><div><small>Email</small><b class="js-email"></b></div></a>
+          <div class="card"><div class="ico"><svg class="ic"><use href="#i-pin"/></svg></div><div><small>Location</small><b class="js-loc"></b></div></div>
+        </div>
+        <div class="band" style="margin:26px 0 0">
+          <h3>Have a project in mind?</h3>
+          <p>Send us the details and get a reply on WhatsApp.</p>
+          <a class="btn btn-light btn-block" href="#/order">Start your project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="page" data-page="about">
+      <div class="pad">
+        <h2 class="title">About Pacifique Design</h2>
+        <p class="lead">A creative design studio in Bujumbura, helping businesses and people look their best.</p>
+        <div class="frame about-img" id="aboutImg" style="--pb:100%"></div>
+        <p>At Pacifique Design we believe good design is simple, clear and memorable. We work with shops, brands, churches, schools, events and creators to build a look that people trust.</p>
+        <p style="margin-top:12px">Every project is made with care and a lot of listening. You bring the idea, we bring the creativity, and together we make something you are proud to show the world.</p>
+        <div class="vals">
+          <div class="val"><svg class="ic"><use href="#i-check"/></svg><div><b>Creative and original</b><span>Designs made only for you, never copied.</span></div></div>
+          <div class="val"><svg class="ic"><use href="#i-check"/></svg><div><b>Friendly and fast</b><span>Quick replies and clear communication on WhatsApp.</span></div></div>
+          <div class="val"><svg class="ic"><use href="#i-check"/></svg><div><b>Professional quality</b><span>Clean files that are ready for print and for social media.</span></div></div>
+        </div>
+        <a class="btn btn-primary btn-block" style="margin-top:22px" href="#/order">Work with us</a>
+      </div>
+    </section>
+
+    <!-- FOOTER (all pages) -->
+    <footer>
+      <div class="brand"><div class="mark js-logo" style="width:40px;height:40px;font-size:15px"><span>PD</span></div><span>Pacifique Design</span></div>
+      <p>Thank you for visiting. We can't wait to bring your ideas to life.</p>
+      <div class="social" id="socialFooter"></div>
+      <div class="contact-lines">
+        <a href="#" class="js-tel"><svg class="ic"><use href="#i-phone"/></svg><span class="js-phone"></span></a>
+        <a href="#" class="js-mail"><svg class="ic"><use href="#i-mail"/></svg><span class="js-email"></span></a>
+        <div><svg class="ic"><use href="#i-pin"/></svg><span class="js-loc"></span></div>
+      </div>
+      <div class="copy">&copy; <span id="yr"></span> Pacifique Design. All rights reserved.</div>
+    </footer>
+  </main>
+</div>
+
+<!-- TAB BAR -->
+<nav class="tabbar" aria-label="Main navigation">
+  <a class="tab" data-tab="home" href="#/home"><svg class="ic"><use href="#i-home"/></svg>Home</a>
+  <a class="tab" data-tab="work" href="#/work"><svg class="ic"><use href="#i-grid"/></svg>Work</a>
+  <a class="tab mid" data-tab="order" href="#/order" aria-label="Start your project"><div class="fab"><svg class="ic"><use href="#i-plus"/></svg></div><span>Order</span></a>
+  <a class="tab" data-tab="services" href="#/services"><svg class="ic"><use href="#i-pen"/></svg>Services</a>
+  <a class="tab" data-tab="contact" href="#/contact"><svg class="ic"><use href="#i-chat"/></svg>Contact</a>
+</nav>
+
+<!-- DRAWER -->
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" aria-label="Menu">
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <div class="brand"><div class="mark js-logo" style="width:38px;height:38px;border:2px solid var(--o);font-size:15px"><span>PD</span></div><span>Pacifique Design</span></div>
+    <button class="icon-btn" id="closeMenu" aria-label="Close menu"><svg class="ic"><use href="#i-x"/></svg></button>
+  </div>
+  <nav id="drawerNav">
+    <a href="#/home" data-tab="home"><svg class="ic"><use href="#i-home"/></svg>Home</a>
+    <a href="#/work" data-tab="work"><svg class="ic"><use href="#i-grid"/></svg>Our work</a>
+    <a href="#/services" data-tab="services"><svg class="ic"><use href="#i-pen"/></svg>Services</a>
+    <a href="#/about" data-tab="about"><svg class="ic"><use href="#i-user"/></svg>About us</a>
+    <a href="#/order" data-tab="order"><svg class="ic"><use href="#i-plus"/></svg>Start your project</a>
+    <a href="#/contact" data-tab="contact"><svg class="ic"><use href="#i-chat"/></svg>Contact</a>
+  </nav>
+  <div class="social" id="socialDrawer" style="justify-content:flex-start"></div>
+</aside>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Project preview">
+  <button class="x" id="lbClose" aria-label="Close"><svg class="ic"><use href="#i-x"/></svg></button>
+  <div class="box" id="lbBox"></div>
+  <div class="cap"><b id="lbTitle"></b><span id="lbCat"></span></div>
+  <a class="btn btn-primary" href="#/order" id="lbCta">Order a similar design</a>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
